@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="js/TweenMax.min.js"></script>
+  <script type="text/javascript" src="js/TweenLite.min.js"></script>
+  <script type="text/javascript" src="js/TimelineMax.min.js"></script>
+  <script type="text/javascript" src="js/TimelineLite.min.js"></script>
+  <script type="text/javascript" src="js/TextPlugin.min.js"></script>
+  <script type="text/javascript" src="js/Vue.js"></script>
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animate.css">
+</head>
+<body>
+
+<div id="app" class="wrapper">
+  <div class="slidecontainer">
+    <p>Сумма Инвестиций:</p>
+    <span v-text="number_investment"></span>
+    <input 
+    id="slider_investment"
+    type="range" 
+    min="1" 
+    max="10" 
+    v-model="slider_investment" 
+    class="slider" 
+    >
+  </div>
+
+  <div class="slidecontainer">
+    <p>Кредитное Плечо: 1:</p>
+    <span v-text="number_shoulder"></span>
+    <input 
+    id="slider_shoulder"
+    type="range" 
+    min="1" 
+    max="10" 
+    v-model="slider_shoulder" 
+    class="slider" 
+    >
+  </div>
+
+  <div class="slidecontainer">
+    <p>Уровень риска:</p>
+    <span v-text="number_risk" 
+          id="number_risk"></span>
+    <input 
+    id="slider_risk" 
+    type="range" 
+    min="1" 
+    max="35" 
+    step="1"
+    v-model="slider_risk" 
+    class="slider"
+    >
+  </div>
+  <p>Ваша прибыль составит:</p>
+  <span v-text="number_income"></span>
+  <p>в месяц</p>
+
+</div>
+
+
+
+
+  <script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

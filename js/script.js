@@ -16,10 +16,10 @@ new Vue ({
       return this.slider_shoulder * 100
     },
     number_risk: function(){
-      return this.slider_risk * 0.01
+      return (this.slider_risk * 0.01).toFixed(2)
     },
     number_income: function(){
-      return this.number_investment * this.number_shoulder * this.number_risk * 30
+      return Math.floor(this.number_investment * this.number_shoulder * this.number_risk * 30)
     }
   }
   
